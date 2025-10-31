@@ -23,13 +23,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        for ($i = 1; $i <= 5; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             Pet::factory()->create([
                 'type' => 'dog',
                 'photo' => 'dog' . $i . '.jpg',
             ]);
         }
-        for ($i = 1; $i <= 5; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             Pet::factory()->create([
                 'type' => 'cat',
                 'photo' => 'cat' . $i . '.jpg',

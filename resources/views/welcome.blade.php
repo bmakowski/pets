@@ -3,7 +3,7 @@
 @section('content')
     <div class="space-y-8">
         <div class="w-full flex items-center justify-center">
-            <img class="w-1/3" src="{{ asset('images/logo.png') }}" alt="logo"/>
+            <img class="w-1/3" src="{{ asset('images/logo-haloween.png') }}" alt="logo"/>
         </div>
         <div class="w-full flex items-center justify-center">
             <x-link href="{{ route('battle') }}"

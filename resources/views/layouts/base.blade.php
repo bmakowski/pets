@@ -24,7 +24,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
-<body class="bg-gradient-to-b from-gray-900 via-black to-orange-900 min-h-screen">
+<body class="bg-gradient-to-b from-indigo-900 via-purple-900 to-black min-h-screen">
 @yield('body')
 </body>
 </html>

@@ -16,6 +16,11 @@ class Pet extends Model
     use HasFactory;
 
     /**
+     * @var string[]
+     */
+    protected $appends = ['number_of_likes'];
+
+    /**
      *
      */
     public function getNumberOfLikesAttribute(): int

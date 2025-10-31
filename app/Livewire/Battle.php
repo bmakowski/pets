@@ -32,11 +32,17 @@ class Battle extends Component
      */
     protected $listeners = ['battleReload' => '$refresh'];
 
+    /**
+     *
+     */
     public function mount(): void
     {
         $this->loadPets();
     }
 
+    /**
+     *
+     */
     public function loadPets(): void
     {
         $this->dog = Pet::where('type', 'dog')->inRandomOrder()->first();

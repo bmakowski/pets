@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="space-y-8">
+    <div class="space-y-8 min-h-screen flex flex-col justify-center">
         <div class="w-full flex items-center justify-center">
             <img class="w-1/3" src="{{ asset('images/logo-haloween.png') }}" alt="logo"/>
         </div>

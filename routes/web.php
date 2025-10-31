@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Pet;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,9 +13,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Welcome.
 Route::view('/', 'welcome')->name('home');
 
+// Battle.
 Route::view('/battle', 'battle')->name('battle');
 
-Route::view('/rankings', 'rankings')->name('rankings');
+// Rankings.
+Route::get('/rankings', function () {
+    $pets = Pet::query()
+        ->withCount('likes')
+        ->orderByDesc('likes_count')
+        ->orderBy('name')
+        ->get();
+
+    return view('rankings', compact('pets'));
+})->name('rankings');
+
+// API Calls
+Route::get('/pets', function () {
+    return Pet::all();
+});
